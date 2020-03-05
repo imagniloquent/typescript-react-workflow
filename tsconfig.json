@@ -18,16 +18,18 @@
     "isolatedModules": true, 
     "noEmit": true, 
     "jsx": "react",
+    "jsxFactory": "h",
     "sourceMap": true, 
     "declaration": true, 
     "noUnusedLocals": true, 
     "noUnusedParameters": true, 
     "experimentalDecorators": true,
-    "incremental": true,
-    "noFallthroughCasesInSwitch": true 
+    "noFallthroughCasesInSwitch": true,
+    "removeComments": true
   },
   "include": [
-    "src/**/*" 
+    "src/**/*.tsx",
+    "src/**/*.ts"
   ],
   "exclude": ["node_modules", "build"] 
 }

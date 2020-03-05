@@ -1,6 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+//import "preact/debug";
+import { h, render } from "preact";
+import App from "./pages/Main";
 import "./global.css";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+render(<App />, document.body);

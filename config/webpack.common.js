@@ -1,5 +1,5 @@
 /* config/webpack.config.js
- * 
+ *
  */
 
 const path = require("path");
@@ -15,9 +15,17 @@ const config = {
             {
                 test: /\.(ts)x?$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                },
+                use: [
+                    {
+                        loader: "babel-loader",
+                    },
+                    {
+                        loader: "ts-loader",
+                        options: {
+                            transpileOnly: true,
+                        },
+                    },
+                ],
             },
             {
                 test: /\.css$/i,
@@ -31,9 +39,15 @@ const config = {
                             modules: true,
                         },
                     },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
                 ],
             },
-        ]
+        ],
     },
     plugins: [
         new HtmlWebpackPlugin({

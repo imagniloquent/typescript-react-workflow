@@ -1,27 +1,30 @@
 //Path: /.eslintrc.js
 
 module.exports = {
-    parser: "@typescript-eslint/parser", 
+    env: {
+        browser: true,
+    },
+    parser: "@typescript-eslint/parser",
     extends: [
-        "plugin:react/recommended", 
-        "plugin:@typescript-eslint/recommended", 
-        "prettier/@typescript-eslint", 
-        "plugin:prettier/recommended" 
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended",
     ],
     parserOptions: {
-        ecmaVersion: 2018, 
-        sourceType: "module", 
+        ecmaVersion: 2018,
+        sourceType: "module",
         ecmaFeatures: {
-            jsx: true 
-        }
+            jsx: true,
+        },
     },
     rules: {
-        // e.g. "@typescript-eslint/explicit-function-return-type": "off",
-        "react/prop-types": "off",
+        "react/no-unknown-property": ["error", { ignore: ["class"] }],
     },
     settings: {
         react: {
-            version: "detect" 
-        }
-    }
+            pragma: "h",
+            version: "detect",
+        },
+    },
 };
