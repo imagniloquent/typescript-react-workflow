@@ -1,15 +1,16 @@
 .app {
-  display: flex;
-  background-color: #ffffff;
-  flex-direction: column;
-  font-size: xx-large;
-  text-align: center;
-  text-shadow: 2px 3px rgba(0, 0, 0, 0.4);
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+	align-items: center;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	text-align: center;
+	text-shadow: 2px 3px rgba(0, 0, 0, 0.4);
 
-  h1 {
-    color: #252525;
-  }
+	h1 {
+		color: #252525;
+		font-size: 4rem;
+		font-weight: 400;
+	}
 }

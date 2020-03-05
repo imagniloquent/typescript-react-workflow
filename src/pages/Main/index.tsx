@@ -4,7 +4,7 @@ import styles from "./styles.css";
 
 const App: FC = () => (
     <div class={styles.app}>
-        <Title title="Modern Typescript Workflow!" />
+        <Title title="React/Typescript Starter!" />
     </div>
 );
 
